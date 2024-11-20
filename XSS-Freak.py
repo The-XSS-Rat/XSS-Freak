@@ -316,7 +316,7 @@ if(len(directories) == 0 and len(all_links) != 0):
 			v = threading.Thread(target=asses_vulnerability_special_links_2)
 			v.start()
 		time.sleep(60)
-		for independent_link in dependent_links:
+		for independent_link in independent_links: #Corrected dependent_link to *independant_links* @XXSRAT You're awesome brother!
 			q = threading.Thread(target=asses_vulnerability_independent_links)
 			q.start()
 		time.sleep(60)
